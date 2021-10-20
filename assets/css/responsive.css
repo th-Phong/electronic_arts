@@ -1,0 +1,237 @@
+/*Tablet + Mobile*/
+@media (max-width: 1023px) {
+  nav > ul {
+    display: none;
+  }
+  .mobile-nav__btn {
+    display: block;
+    cursor: pointer;
+  }
+  .alert {
+    flex-direction: column;
+    text-align: center;
+  }
+  .alert .content {
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+  }
+  .alert h3 {
+    font-size: 2.2rem;
+  }
+  .alert button {
+    margin: 20px auto 10px;
+  }
+  .banner .container p {
+    font-size: 1.8rem;
+  }
+  .banner .container a {
+    font-size: 1.6rem;
+    padding: 16px 20px;
+  }
+  .box-games {
+    width: 80vw;
+  }
+  main footer .social-links {
+    text-align: left;
+  }
+  main footer .social-links .link-icon {
+    display: block;
+  }
+  main footer .social-links .link-icon a {
+    margin-right: 16px;
+  }
+  body > footer > ul,
+  body > footer > p {
+    margin-left: 0;
+  }
+  main footer .row .content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+  main footer .row .content ul {
+    font-size: 1.6rem;
+    line-height: 0px;
+  }
+  main footer li {
+    margin: 0;
+  }
+
+  footer .mainfooter.content {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .footer__logo {
+    padding: 0;
+    margin: 0 0 20px 0;
+    width: 56px;
+    height: 56px;
+  }
+  .footer__nav {
+    width: 90%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .footer__nav button {
+    width: 92%;
+    margin: 20px 0 0 0;
+  }
+}
+
+/*Tablet*/
+
+@media (min-width: 740px) and (max-width: 1023px) {
+}
+
+/*Mobile*/
+
+@media (max-width: 739px) {
+  :root {
+    --gutter: 12px;
+    --margin: 28px;
+  }
+  .user__nav,
+  .help__nav {
+    flex-direction: column;
+    left: 15%;
+    right: 15%;
+    width: unset;
+  }
+  .user__nav a,
+  .help__nav .link-wrap a {
+    flex-direction: row;
+    width: 100%;
+    margin: 8px 0;
+  }
+  .user__nav a span,
+  .help__nav a span {
+    flex: 1;
+    text-align: left;
+    margin-left: 12px;
+  }
+  .help__nav .link-wrap {
+    flex-direction: column;
+  }
+  .help__nav > p {
+    padding-top: 10px;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  .nav__logo img {
+    height: calc(var(--nav-height) - 32px);
+  }
+  .mobile-nav__btn > span {
+    display: none;
+  }
+  .all-games,
+  .mobile-nav {
+    width: 100vw;
+    padding: 8px 6%;
+  }
+  .banner {
+    height: fit-content;
+  }
+  .banner > img {
+    width: unset;
+    height: 100vw;
+    margin-right: -53%;
+    float: right;
+  }
+  .banner > .container {
+    position: relative;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    padding: 24px 0;
+    left: 0;
+  }
+  .banner > .container h3 {
+    font-size: 3rem;
+  }
+  .banner > .container p {
+    font-size: 2rem;
+  }
+  .banner > .container a {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .box-games .pane img,
+  .box-games .pane p {
+    display: none;
+  }
+  .box-games .pane .desc {
+    text-align: center;
+    height: fit-content;
+  }
+  .box-games .pane .desc span {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .box-games button {
+    width: 100%;
+  }
+  .alert {
+    text-align: center;
+  }
+  .alert .content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .alert .content h3 {
+    text-align: center;
+  }
+  .alert button {
+    padding: 0px 0px;
+    width: 92%;
+    margin-bottom: -10px;
+  }
+  main > footer ul {
+    border-bottom: 1px solid #969696;
+    padding: 0;
+  }
+  main footer .row {
+    padding: 10px 10px 80px 10px;
+  }
+  main footer .row .content {
+    /* width: 100%; */
+  }
+  main footer .row .content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    width: 90%;
+    margin: 0;
+    line-height: 1.6rem;
+  }
+  body > footer div ul {
+    font-size: 1.4rem;
+    line-height: 3rem;
+  }
+  .footer__nav {
+    width: 100%;
+  }
+  .footer__nav button {
+    width: 100%;
+  }
+  footer .mainfooter.content {
+    width: 100vw;
+    padding: 10px;
+  }
+  .footer__policy ul {
+    line-height: 3.4rem;
+    font-size: 1.3rem;
+  }
+  .footer__copyright {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+}

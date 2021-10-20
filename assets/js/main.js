@@ -38,3 +38,88 @@ headerTabs.forEach((tab, index) => {
 closeBtnHeader.onclick = () => {
   resetHeader();
 };
+/*Hide header when scroll-down*/
+var scroll = (window.onscroll = () => {
+  if (this.oldScroll > this.scrollY) {
+    // Up
+    $("header").classList.remove("hide");
+    $("nav").classList.remove("hide");
+  } else {
+    //Down
+    $("header").classList.add("hide");
+    $("nav").classList.add("hide");
+  }
+  this.oldScroll = this.scrollY;
+});
+
+/*Nav*/
+var closeBtnNav = $(".all-games .close-btn");
+var menuBtn = $("nav .menu>i");
+
+function resetNav() {
+  overlay.style.display = "none";
+  $(".all-games").style.transform = "translateX(-100%)";
+  $("body").classList.remove("stop-scrolling");
+}
+
+menuBtn.onclick = () => {
+  $("header").classList.remove("hide");
+  $("nav").classList.remove("hide");
+  overlay.style.display = "block";
+  $(".all-games").style.transform = "translateX(0)";
+  $("body").classList.add("stop-scrolling");
+};
+
+closeBtnNav.onclick = () => {
+  resetNav();
+};
+/*Mobile Nav*/
+var mobileNavBtn = $(".mobile-nav__btn");
+var mobileNavClose = $(".mobile-nav .close");
+
+function resetMobileNav() {
+  overlay.style.display = "none";
+  $("body").classList.remove("stop-scrolling");
+  $(".mobile-nav").style.transform = "translateX(-100%)";
+}
+
+mobileNavBtn.onclick = () => {
+  overlay.style.display = "block";
+  $(".mobile-nav").style.transform = "translate(0)";
+  $("header").classList.remove("hide");
+  $("nav").classList.remove("hide");
+  $("body").classList.add("stop-scrolling");
+};
+mobileNavClose.onclick = () => {
+  resetMobileNav();
+};
+/*Tab Main */
+var mainTabs = $$(".box-games .tab");
+var mainPanes = $$(".box-games .pane");
+
+mainTabs.forEach((tab, index) => {
+  tab.onclick = () => {
+    $(".tab.active").classList.remove("active");
+    $(".pane.show").classList.remove("show");
+
+    tab.classList.add("active");
+    mainPanes[index].classList.add("show");
+  };
+});
+
+/*Tab Slide Mobile*/
+new Splide(".box-games>.splide", {
+  pagination: false,
+  autoWidth: true,
+  arrows: false,
+}).mount();
+
+//Reset all when click overlay
+overlay.onclick = () => {
+  //
+  if (screen.width < 740) {
+    resetHeader();
+  }
+  resetNav();
+  resetMobileNav();
+};
